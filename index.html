@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafas Geheimnis</title>
+    <style>
+        body {
+            /* Hintergrundbild einfügen */
+            background-image: url('Rafa.jpg');
+            /* Hier den Pfad zu deinem Bild auf deinem Computer einfügen */
+            background-size: contain; /* Das Bild soll den gesamten Bildschirm bedecken */
+            background-position: center; /* Das Bild soll zentriert sein */
+            color: white; /* Textfarbe auf weiß setzen */
+            text-align: center; /* Den Text zentrieren */
+        }
+        .container {
+            padding: 20px; /* Innenabstand für den Inhalt hinzufügen */
+            background-color: rgba(0, 0, 0, 0.856); /* Hintergrundfarbe mit Transparenz für bessere Lesbarkeit */
+            border-radius: 10px; /* Ecken abrunden */
+            margin: 100px auto; /* Zentrieren des Inhalts vertikal und horizontal */
+            max-width: 400px; /* Maximale Breite des Inhalts festlegen */
+        }
+        .confirmed {
+            background-color: green; /* Hintergrundfarbe ändern, wenn bestätigt */
+            transition: background-color 0.5s; /* Übergangseffekt für die Farbänderung */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rafas Geheimnis</h1>
+        <br>
+        <input placeholder="Name"><br>
+        <input placeholder="Nachname"><br>
+        <button id="confirmButton"><strong> Bestätigen </strong></button>
+        <p><strong>Drücke auf diesen Knopf, um Rafas Geheimnis herauszufinden</strong></p>
+        <a href="https://www.youtube.com/watch?v=nYpr33EIku0&ab_channel=HalfBoyfriend"><button><strong>Jetzt Herausfinden!</strong></button></a>
+    </div>
+
+    <script>
+        // JavaScript-Code, um die Bestätigung zu animieren
+        const confirmButton = document.getElementById("confirmButton");
+        confirmButton.addEventListener("click", function() {
+            // Füge der Container-Klasse eine zusätzliche Klasse hinzu, um den Bestätigungsstil anzuzeigen
+            document.querySelector(".container").classList.add("confirmed");
+        });
+    </script>
+</body>
+</html>
